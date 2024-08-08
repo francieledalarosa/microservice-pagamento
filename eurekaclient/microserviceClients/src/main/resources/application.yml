@@ -1,1 +1,14 @@
-spring.application.name=microserviceClients
+spring:
+  applocation:
+    name: mscclientes
+
+#0 pois assim cria portas randomicas sem um número definido.
+server:
+  port: 0
+#se conectando ao eurekaserver
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.applocation.name}:${spring.aplication.instance_id:${ramdom.value}}
