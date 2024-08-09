@@ -2,7 +2,7 @@ spring:
   applocation:
     name: mscclientes
 
-#0 pois assim cria portas randomicas sem um número definido.
+#0 pois assim cria portas randomicas sem um nï¿½mero definido.
 server:
   port: 0
 #se conectando ao eurekaserver
@@ -11,4 +11,4 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
   instance:
-    instance-id: ${spring.applocation.name}:${spring.aplication.instance_id:${ramdom.value}}
+    instance-id: ${spring.applocation.name}:${spring.aplication.instance_id:${random.value}}
